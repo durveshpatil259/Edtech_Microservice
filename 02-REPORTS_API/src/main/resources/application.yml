@@ -1,0 +1,17 @@
+
+#db configurations
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url:  jdbc:mysql://localhost:3306/reportsapi?createDatabaseIfNotExist=true
+
+  #jpa configurations
+  jpa:
+    hibernate:
+      ddl-auto: update   #If there is necessary changes required in your mappings/scheme then it will create it.
+    show-sql: true      # Any sql query that it will create, will be shown in console.
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect    #MySQL8 will generate query according to the need of database.
